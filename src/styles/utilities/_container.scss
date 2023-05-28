@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.u-container{
+    width: 80%;
+    max-width: 1600px;
+    display: block;
+    margin: 0 auto;
+    @include mxq(sm){
+        width: 95%;
+    }
+
+    &--strong{
+        margin-top: 20px;
+        width: 94%;
+    }
+}

@@ -1,0 +1,7 @@
+@use '../theme/' as *;
+
+@each $nameColor, $color in $colors{
+    .u-background--#{$nameColor}{
+        background: var(--color-#{$nameColor})
+    }
+}

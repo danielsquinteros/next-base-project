@@ -1,0 +1,7 @@
+@use '../theme' as *;
+
+:root {
+    @each $nameColor, $color in $colors{
+        --color-#{$nameColor}:#{$color};
+    }
+}

@@ -1,0 +1,32 @@
+@use "../theme/" as *;
+@use "../abstracts/" as *;
+
+@each $typ-variant in $typography-variants{
+    $nameVariant: nth($typ-variant, 1);
+    $valueVariant: nth($typ-variant, 2);
+    .typ{
+        &--#{$nameVariant}{
+            @include variants-typography($valueVariant);
+        }
+    }
+}
+
+
+// @each $font-primary-title-level in $font-primary-title-levels{
+//     $nameLevel: nth($font-primary-title-level, 1);
+//     $valueLevel: nth($font-primary-title-level, 2);
+//     .o-font-primary-title{
+//         &-#{$nameLevel}{
+//             @each $font-primary-weight in $font-primary-weights{
+//                 $nameWeight: nth($font-primary-weight, 1);
+//                 $valeWeight: nth($font-primary-weight, 2);
+//                 &--#{$nameWeight}{
+//                     @extend .base-font-primary; 
+//                     @include font-size($valueLevel);
+//                     font-weight: #{$valeWeight}
+//                 }
+//             }
+                
+//         }
+//     }
+// }

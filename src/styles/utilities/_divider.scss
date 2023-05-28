@@ -1,0 +1,8 @@
+@use '../abstracts/' as *;
+
+@each $nameDivider, $heightDivider in $dividers{
+    .o-divider--#{$nameDivider}{
+        height: $heightDivider;
+        width: 100%;
+    }
+}
