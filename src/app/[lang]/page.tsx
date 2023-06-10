@@ -2,6 +2,7 @@ import Typography from '@/components/common/Typography'
 import { getDictionary } from '../../get-dictionary'
 import { Locale } from '../../i18n-config'
 import LocaleSwitcher from './components/locale-switcher'
+import Header from '@/components/Header'
 
 export default async function IndexPage({
   params: { lang },
@@ -11,8 +12,9 @@ export default async function IndexPage({
   const dictionary = await getDictionary(lang)
 
   return (
-    <div className='u-container'>
+    <div>
       <LocaleSwitcher />
+      <Header />
       <p>Current locale: {lang}</p>
       <p>
         This text is rendered on the server:{' '}
